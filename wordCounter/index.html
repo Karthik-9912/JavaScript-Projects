@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <textarea rows="6" cols="40" name="" id="text" placeholder="Enter something....."></textarea>
+
+    <p>Words :<span id="words">0</span></p>
+    <p>Chars :<span id="chars">0</span></p>
+
+    <script>
+        const text=document.getElementById('text')
+        const wordCount=document.getElementById('words')
+        const charCount=document.getElementById('chars')
+
+        text.addEventListener("input",()=>{
+            let textarea=text.value;
+
+            let words=textarea.trim().split(/\s+/).filter(word => word.length>0)
+            
+            wordCount.textContent=words.length;
+
+            charCount.textContent=textarea.length;
+        })
+
+    </script>
+</body>
+</html>
