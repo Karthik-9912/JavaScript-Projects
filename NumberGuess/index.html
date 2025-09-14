@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <input type="text" name="" id="inp1" placeholder="Guess the Number...">
+    <button id="btn">Guess</button>
+    <div id="res"></div>
+
+
+    <!-- <script src="./script.js"></script> -->
+    <script>
+        
+        let guessedNumber = Math.floor(Math.random()*10)+1;
+
+        let inp1=document.getElementById("inp1");
+        let btn=document.getElementById("btn");
+        let div=document.getElementById("res")
+
+        let attempts=5;
+        btn.addEventListener("click",()=>{
+            console.log(guessedNumber)
+            let num=Number(inp1.value)
+            attempts--
+            
+            if(num<guessedNumber){
+                div.innerHTML=`Oops its a bigger than this <br> You have ${attempts} left`
+            }
+            else if(num>guessedNumber){
+                div.innerHTML=`Oh oooo its smaller than this Lol <br> You have ${attempts} left`
+            }
+            else if(num==guessedNumber){
+                div.innerHTML="Yayyy...You guessed it right:)"
+            }
+            if(attempts===0){
+                div.innerHTML=`You Loose The game :( You have ${attempts} left`
+            }
+            inp1.value=""
+
+        })
+
+    </script>
+</body>
+</html>
