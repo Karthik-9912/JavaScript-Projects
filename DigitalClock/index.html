@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .boxes {
+        display: flex;
+        gap: 20px;
+        height: 350px;
+        justify-content: center;
+        align-items: end;
+      }
+      .boxes div {
+        border: 2px solid;
+        height: 100px;
+        width: 100px;
+        text-align: center;
+        align-content: center;
+      }
+      .btns{
+        /* border: 2px solid; */
+        text-align: center;
+        align-content:center;
+        margin-top: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="boxes">
+      <div id="hour"></div>
+      <div id="min"></div>
+      <div id="sec"></div>
+    </div>
+
+    <!-- <div class="btns">
+        <button id="startTime">Start</button>
+        <button id="stopTime">Stop</button>
+    </div> -->
+    
+
+    <script src="./script.js"></script>
+  </body>
+</html>
